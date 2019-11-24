@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+
+
+
+std::vector<int>::const_iterator find(std::vector<int>::const_iterator b, std::vector<int>::const_iterator c,
+           int x)
+           {
+              auto it = c;
+                for(;b < c; ++b)
+                    {
+
+                     if(*b == x)
+                {
+                     it = b;
+                }
+                    }
+
+                return it ;
+           }
+int main() {
+const std::vector<int> vector {3, -1, 7, 12, -5, 7, 10};
+std::cout << find(vector.begin() + 2, vector.end(), 3) - vector.begin() << std::endl; }
